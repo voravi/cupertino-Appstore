@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 50,
                       ),
                       Text(
@@ -68,11 +68,11 @@ class _HomePageState extends State<HomePage> {
                             return CupertinoListTile(
                               onTap: () {},
                               contentPadding:
-                                  EdgeInsets.only(bottom: 10, top: 10),
+                                  const EdgeInsets.only(bottom: 10, top: 10),
                               title: Text("${products[index]["name"]}"),
                               subtitle: Text(
                                 "${products[index]["price"]}",
-                                style: TextStyle(
+                                style: const TextStyle(
                                     color: CupertinoColors.inactiveGray,
                                     fontSize: 13),
                               ),
@@ -96,10 +96,10 @@ class _HomePageState extends State<HomePage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 30,
                         ),
-                        CupertinoSearchTextField(),
+                        const CupertinoSearchTextField(),
                         SizedBox(
                           height: 535,
                           width: double.infinity,
@@ -109,11 +109,11 @@ class _HomePageState extends State<HomePage> {
                               return CupertinoListTile(
                                 onTap: () {},
                                 contentPadding:
-                                    EdgeInsets.only(bottom: 10, top: 10),
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 title: Text("${products[index]["name"]}"),
                                 subtitle: Text(
                                   "${products[index]["price"]}",
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       color: CupertinoColors.inactiveGray,
                                       fontSize: 13),
                                 ),
@@ -138,7 +138,7 @@ class _HomePageState extends State<HomePage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         ),
                         Text(
@@ -151,7 +151,7 @@ class _HomePageState extends State<HomePage> {
                             fontSize: 30,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         CupertinoTextField(
@@ -161,9 +161,9 @@ class _HomePageState extends State<HomePage> {
                                 CupertinoColors.inactiveGray.withOpacity(0.8),
                           ),
                           placeholder: "Name",
-                          decoration: BoxDecoration(),
+                          decoration: const BoxDecoration(),
                         ),
-                        Divider(),
+                        const Divider(),
                         CupertinoTextField(
                           prefix: Icon(
                             CupertinoIcons.mail,
@@ -171,9 +171,9 @@ class _HomePageState extends State<HomePage> {
                                 CupertinoColors.inactiveGray.withOpacity(0.8),
                           ),
                           placeholder: "Email",
-                          decoration: BoxDecoration(),
+                          decoration: const BoxDecoration(),
                         ),
-                        Divider(),
+                        const Divider(),
                         CupertinoTextField(
                           prefix: Icon(
                             CupertinoIcons.location,
@@ -181,9 +181,9 @@ class _HomePageState extends State<HomePage> {
                                 CupertinoColors.inactiveGray.withOpacity(0.8),
                           ),
                           placeholder: "Location",
-                          decoration: BoxDecoration(),
+                          decoration: const BoxDecoration(),
                         ),
-                        Divider(),
+                        const Divider(),
                         CupertinoTextField(
                           prefix: Icon(
                             CupertinoIcons.time,
@@ -194,8 +194,8 @@ class _HomePageState extends State<HomePage> {
                           keyboardType: TextInputType.none,
                           suffix: Text(
                               "${currantDate.toString().split(":")[0]}:${currantDate.toString().split(":")[1]}",
-                              style: TextStyle(color: Colors.grey)),
-                          decoration: BoxDecoration(),
+                              style: const TextStyle(color: Colors.grey)),
+                          decoration: const BoxDecoration(),
                         ),
                         Container(
                           height: 200,
@@ -219,11 +219,11 @@ class _HomePageState extends State<HomePage> {
                               return CupertinoListTile(
                                 onTap: () {},
                                 contentPadding:
-                                    EdgeInsets.only(bottom: 10, top: 10),
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 title: Text("${products[index]["name"]}"),
                                 subtitle: Text(
                                   "${products[index]["price"]}",
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       color: CupertinoColors.inactiveGray,
                                       fontSize: 13),
                                 ),
@@ -241,12 +241,12 @@ class _HomePageState extends State<HomePage> {
                             },
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
+                          children: const [
                             Text(
                               "Shipping \$21.00",
                               style: TextStyle(
@@ -256,13 +256,13 @@ class _HomePageState extends State<HomePage> {
                             )
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Text(
+                          children: const [
+                             Text(
                               "Tax \$10.32",
                               style: TextStyle(
                                 color: CupertinoColors.inactiveGray,
@@ -271,12 +271,12 @@ class _HomePageState extends State<HomePage> {
                             )
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
+                          children: const [
                             Text(
                               "Total   \$201.32",
                               style: TextStyle(
@@ -287,7 +287,7 @@ class _HomePageState extends State<HomePage> {
                             )
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                       ],
@@ -297,19 +297,19 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          Spacer(),
+          const Spacer(),
           CupertinoTabBar(
             currentIndex: currantNavigationBarIndex,
             onTap: (val) {
               setState(() {
                 currantNavigationBarIndex = val;
                 _pageController.animateToPage(val,
-                    duration: Duration(milliseconds: 300),
+                    duration: const Duration(milliseconds: 300),
                     curve: Curves.linear);
               });
             },
             height: 60,
-            items: [
+            items: const [
               BottomNavigationBarItem(
                 icon: Icon(CupertinoIcons.home),
                 label: "Home",
